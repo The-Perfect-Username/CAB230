@@ -16,7 +16,7 @@ body {
 
 header {
     position: relative;
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #d1d1d1;
     height: 100px;
 }
 
@@ -81,7 +81,7 @@ section {
 }
 
 footer {
-    border-top: 1px solid #888;
+    border-top: 1px solid #d1d1d1;
     height: 200px;
     position: relative;
 }
