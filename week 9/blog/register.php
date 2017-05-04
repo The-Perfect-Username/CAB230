@@ -2,7 +2,7 @@
 <?php require "./includes/partials/navMenu.inc"; ?>
 <?php require "./includes/scripts/register.inc"; ?>
 <h2>Create an account</h2>
-<form action="./includes/scripts/register.php" method="post">
+<form action="register.php" method="post">
     <!-- Registration form -->
     <div class="form-group">
         <label>First name</label>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label>Email</label>
-        <input class="form-control" type="email" name="email" />
+        <input class="form-control" type="text" name="email" />
     </div>
     <div class="form-group">
         <label>Password</label>
