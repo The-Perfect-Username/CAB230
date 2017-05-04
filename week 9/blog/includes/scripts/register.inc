@@ -1,15 +1,22 @@
 <?php
-    global $errors;
+
     if (isset($_POST['submit'])) {
         global $database;
         try {
+
             // Collect input values
             $firstname = $_POST['first_name'];
             $lastname = $_POST['last_name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            if (count($errors) > 0) {
+            // Validate user input
+            validate_first_name($firstname);
+            validate_last_name($lastname);
+            validate_email($email);
+
+            // Count if there are any errors found
+            if (count($errors) === 0) {
                 // Create salt
                 $saltHash = md5(uniqid());
                 $salt = substr($saltHash, 0, 20);
@@ -29,7 +36,7 @@
                 $stmt->bindParam(':last_name', $lastname);
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':password', ($password));
-                $stmt->bindParam(':salt', ($salt));
+                $stmt->bindParam(':salt', $salt);
 
                 // Execute the query
                 $stmt->execute();
