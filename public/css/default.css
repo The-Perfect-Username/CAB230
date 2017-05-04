@@ -80,6 +80,97 @@ section {
     color: #0099ff;
 }
 
+.inline-menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.menu-item {
+    flex: auto;
+    border: 1px solid;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 5px;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    transition: background .2s ease-in-out, color .2s ease-in-out, font-size .2s ease-in-out;
+}
+
+    .menu-item:hover {
+        background: #ff0066;
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .menu-item span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: inherit;
+    }
+
+form h3.form-legend {
+    padding: 0;
+    margin: 0;
+}
+
+.form-group {
+    display: relative;
+    margin-bottom: 15px;
+}
+
+form .form-control {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 14px;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+
+.btn-info {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+    .btn-info:hover {
+        color: #fff;
+        background: #0099cc;
+    }
+
+.btn-default {
+    border: 2px solid #cccccc;
+    color: #999999;
+    transition: background .2s ease-in-out, color .2s ease-in-out;
+}
+    .btn-default:hover {
+        color: #595959;
+        background: #cccccc;
+    }
+
+textarea {
+    resize: vertical;
+}
+
+.input-validator {
+    color: #ff4d4d;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
 footer {
     border-top: 1px solid #d1d1d1;
     height: 200px;

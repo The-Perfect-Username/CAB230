@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="./public/images/favicon.png" type="image/x-icon" />
         <link href="./public/css/default.css" rel="stylesheet" />
+        <script src="./public/js/default.js"></script>
         <!-- http://fontawesome.io/ -->
         <link rel="stylesheet" href="./public/css/fa/css/font-awesome.min.css">
     </head>
@@ -15,63 +16,85 @@
                 CAB230
             </div>
             <nav>
-                <a href='#one'>Section One</a>
-                <a href='#two'>Section Two</a>
-                <a href='#three'>Section Three</a>
+                <a href='#one'>Menu Options</a>
+                <a href='#two'>Google Maps</a>
+                <a href='#three'>Form Validation</a>
             </nav>
         </header>
         <main>
             <section id='one'>
-                <h2 class="standard-title">Section One</h2>
-                <div>
-                    <p>
-                        <!-- http://www.lipsum.com/ -->
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu odio congue, tempor erat sed, tempor sem.
-                        Sed et consequat felis. Vestibulum vitae ante ex. Praesent dictum vestibulum libero, id pharetra leo. Sed
-                        dapibus sed nisi id maximus. Nam a nulla in leo faucibus tempor et sit amet turpis. Nullam a vehicula sapien.
-                        Pellentesque tempus sapien id ex feugiat porttitor. Curabitur vulputate egestas arcu ut molestie. Nulla sed
-                        lectus mi. Quisque efficitur erat ac tincidunt ullamcorper. Phasellus lacus velit, facilisis quis sapien nec,
-                        tempus ullamcorper risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat.
-                    </p>
-                    <p>
-                        Ut vel ipsum et mi tristique aliquet eget eu enim. Nulla nec interdum quam. Vestibulum gravida lobortis nibh,
-                        a dictum ex. Sed euismod vestibulum elit, in blandit diam laoreet a. Aenean blandit turpis ac quam vehicula iaculis.
-                        Suspendisse eu risus in urna tempor maximus. Aenean interdum, dui sollicitudin ultricies dignissim, tellus mi
-                        aliquet ex, et pellentesque nibh dui at mauris. Ut suscipit ultricies nisi non bibendum.
-                    </p>
+                <h2 class="standard-title">Menu Options</h2>
+                <div class="inline-menu" rel='#bOne'>
+                    <div class="menu-item">
+                        <span>Block One</span>
+                    </div>
+                    <div class="menu-item" rel='#bTwo'>
+                        <span>Block Two</span>
+                    </div>
+                    <div class="menu-item" rel='#bThree'>
+                        <span>Block Three</span>
+                    </div>
+                </div>
+                <br />
+                <div id='blockParent'>
+                    <div id='bOne' class="block" onclick="getClass(this);">This is block one</div>
+                    <div id='bOne' class="block">This is block two</div>
+                    <div id='bOne' class="block">This is block three</div>
                 </div>
             </section>
             <section id='two'>
-                <h2 class="standard-title">Section Two</h2>
-                <div>
-                    <p>
-                        Etiam ut mi massa. Morbi dui purus, faucibus ac elementum at, mollis eget ex. Mauris neque eros, viverra non pulvinar a,
-                        lacinia et turpis. Phasellus iaculis quam non mattis sodales. Nulla pulvinar ipsum vitae gravida efficitur. Curabitur
-                        tincidunt vestibulum elit nec rhoncus. Praesent lacus massa, pulvinar sed condimentum ac, pretium non quam. Sed porttitor
-                        purus eget nulla blandit, sollicitudin feugiat purus lacinia. Integer commodo ipsum dolor, vitae suscipit dui maximus ut.
-                        In turpis eros, imperdiet quis elementum a, dignissim quis orci. Maecenas enim leo, pretium vitae orci ac, suscipit gravida
-                        lacus. Cras imperdiet vestibulum mi. Sed eleifend ac mauris ut molestie. Aliquam auctor est eget iaculis mollis. Curabitur
-                        et posuere massa.
-                    </p>
-                </div>
+                <h2 class="standard-title">Google Maps</h2>
             </section>
             <section id='three'>
-                <h2 class="standard-title">Section Three</h2>
+                <h2 class="standard-title">Form Validation</h2>
                 <div>
-                    <p>
-                        Integer euismod dignissim lorem, in pharetra massa sodales eget. Etiam hendrerit commodo justo, placerat faucibus lacus
-                        dictum at. Phasellus mattis urna in ultrices tincidunt. Vivamus aliquet tempus urna vitae imperdiet. Nullam ut dictum mi.
-                        Praesent ultrices justo in tortor scelerisque tincidunt. Proin imperdiet congue congue. Etiam interdum eros sit amet orci
-                        placerat, a commodo quam volutpat. Mauris sit amet fringilla nisl. Vivamus et cursus justo, eget consequat tellus. In
-                        tempus lectus in commodo auctor. Nunc vestibulum neque nibh, et efficitur augue porta a. Vivamus placerat tincidunt quam a
-                        maximus. Nulla facilisi.
-                    </p>
-                    <p>
-                        Aliquam erat volutpat. Nullam facilisis convallis enim, quis feugiat magna luctus eget. Praesent et sapien sit amet
-                        ipsum viverra rutrum. Aenean et elit sapien. Curabitur pellentesque tellus ac magna tempus, in elementum metus
-                        ultricies. In vitae metus lorem. Fusce ac elit ac magna ultricies finibus vel nec ex. Fusce in ligula pretium,
-                        condimentum enim sed, eleifend quam. Sed egestas elit nec pretium lacinia.
-                    </p>
+                    <form action="/directory/url" method="get">
+                        <div class="form-group">
+                            <h3 class="form-legend">Register</h3>
+                        </div>
+                        <div class="form-group">
+                            <!-- The label tag defines a label for the input field -->
+                            <label>Username</label>
+                            <span class="input-validator" id='usernameValidation'>Username is too short</span>
+                            <!-- Type specifies the element to display. -->
+                            <!-- Name specifies the name of the input. -->
+                            <!-- Maxlength specifies the maximum string length of the input. -->
+                            <!-- Required specifies that the user must input a value -->
+                            <input type="text" id='username' class='form-control' name='username' maxlength="25" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <span class="input-validator" id='emailValidation'>Email address does not contain an '@' or '.' symbol</span>
+                            <!-- User input must contain a @ symbol. Not secure enough for validation. -->
+                            <!-- Only way to ensure secure validation for email is to send an email to that address
+                                 and request the sender to verify their email account -->
+                            <input type="email" id='email' class='form-control' name='email' maxlength="100" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <!-- Type of password will hide the user input -->
+                            <input type="password" id='password' class='form-control' name='password' maxlength="100" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <!-- Radio buttons can share the same name. This means only one button can be checked at any time. -->
+                            <!-- Checked attribute automatically checks the button by default -->
+                            <input type="radio" name='gender' checked /> Male
+                            <input type="radio" name='gender' /> Female
+                        </div>
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <!-- Textarea fields are primarily used for long text inputs -->
+                            <textarea rows="4" cols='50' class='form-control' maxlength="1000"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name='remember' checked /> Remember my login details
+                        </div>
+                        <div class="form-group">
+                            <button id='submitBtn' class='btn btn-info' onclick="checkName(this);">Submit</button>
+                            <button id='cancelBtn' class='btn btn-default'>Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>

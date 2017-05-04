@@ -1,0 +1,143 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: 100%;
+}
+
+body {
+    background: #ff4d4d;
+}
+
+* {
+    font-family: tahoma;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 40px;
+    width: 100%;
+    background: #000;
+    position: relative;
+}
+
+    header nav#socialMediaMenu {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: #ffff33;
+    }
+
+    header nav#socialMediaMenu a {
+        color: #d6d6d6 !important;
+        margin: 0 10px;
+    }
+        header nav#socialMediaMenu a:hover {
+            color: #cccc00 !important;
+        }
+
+    header nav#accessMenu {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(0, -50%);
+        color: #ffff33;
+    }
+
+        header nav#accessMenu a {
+            color: #d6d6d6 !important;
+            margin: 0 10px;
+        }
+            header nav#accessMenu a:hover {
+                color: #cccc00 !important;
+            }
+
+main {
+    margin: auto;
+    width: 600px;
+    min-height: calc(100% - 40px);
+    background: #e6e6e6;
+    box-shadow: 0 0 30px #000;
+    box-sizing: border-box;
+    padding: 5px 30px;
+}
+
+#innerBackground {
+    background: #f2f2f2;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 10px #ccc;
+    position: relative;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.action-trigger {
+    text-decoration: none;
+    color: #0099ff;
+}
+    .action-trigger:hover {
+        cursor: pointer;
+        color: #0099cc;
+    }
+/**************************************
+Forms
+**************************************/
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #e6e6e6;
+    outline: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+div.form-group {
+    margin-bottom: 10px;
+}
+
+div.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+div.button-container .btn {
+    margin-left: 10px;
+}
+
+.btn {
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-info {
+    background: #ff3434;
+    color: #fff;
+}
+    .btn-info:hover {
+        background: #ff4d4d;
+    }

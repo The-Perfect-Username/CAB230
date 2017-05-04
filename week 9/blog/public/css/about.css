@@ -1,0 +1,13 @@
+
+.header-wrapper {
+    margin: 30px 0;
+}
+
+    .header-wrapper h2 {
+        padding: 0;
+        margin: 0;
+    }
+
+#aboutForm {
+    display: none;
+}
