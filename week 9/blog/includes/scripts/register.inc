@@ -45,7 +45,7 @@
                     // Get newly created account ID
                     $userId = $database->lastInsertId();
                     // Redirect to index.php
-                    header("location: http://localhost/blog/register.php");
+                    header("location: http://localhost/blog/index.php");
                 }
             } else {
                 print_r($errors);
