@@ -26,17 +26,28 @@ header {
     position: relative;
 }
 
+    header div.header-container {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+        top: 45%;
+        transform: translateY(-50%);
+    }
+
+    header nav {
+        font-size: 0.85em;
+    }
+
     header nav#socialMediaMenu {
         position: absolute;
         top: 50%;
-        left: 25%;
-        transform: translate(-50%, -50%);
+        transform: translate(0, -50%);
         color: #ffff33;
     }
 
     header nav#socialMediaMenu a {
         color: #d6d6d6 !important;
-        margin: 0 10px;
     }
         header nav#socialMediaMenu a:hover {
             color: #cccc00 !important;
@@ -45,9 +56,9 @@ header {
     header nav#accessMenu {
         position: absolute;
         top: 50%;
-        right: 5%;
         transform: translate(0, -50%);
         color: #ffff33;
+        right: 0;
     }
 
         header nav#accessMenu a {
@@ -57,6 +68,8 @@ header {
             header nav#accessMenu a:hover {
                 color: #cccc00 !important;
             }
+
+
 
 main {
     margin: auto;

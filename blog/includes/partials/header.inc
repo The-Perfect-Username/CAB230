@@ -18,20 +18,22 @@
     </head>
     <body>
         <header>
-            <nav id="socialMediaMenu">
-                <a href="#">Facebook</a>
-                |
-                <a href="#">Twitter</a>
-                |
-                <a href="#">Instagram</a>
-                |
-                <a href="#">Tumblr</a>
-            </nav>
-            <nav id="accessMenu">
-                <a href="./register.php">Register</a>
-                |
-                <a href="./login.php">Login</a>
-            </nav>
+            <div class="header-container">
+                <nav id="socialMediaMenu">
+                    <a href="#">Facebook</a>
+                    |
+                    <a href="#">Twitter</a>
+                    |
+                    <a href="#">Instagram</a>
+                    |
+                    <a href="#">Tumblr</a>
+                </nav>
+                <nav id="accessMenu">
+                    <a href="./register.php">Register</a>
+                    |
+                    <a href="./login.php">Login</a>
+                </nav>
+            </div>
         </header>
         <main>
             <section id="innerBackground">
